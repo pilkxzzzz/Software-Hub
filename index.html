@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Hub - Завантаження Програм</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <h1>Software Hub</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Пошук програм...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="category-filter">
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">Всі</button>
+                <button class="category-btn" data-category="Development">Розробка</button>
+                <button class="category-btn" data-category="Utilities">Утиліти</button>
+                <button class="category-btn" data-category="Security">Безпека</button>
+                <button class="category-btn" data-category="Multimedia">Мультимедіа</button>
+                <button class="category-btn" data-category="Design">Дизайн</button>
+            </div>
+        </section>
+
+        <section class="software-grid" id="softwareGrid">
+            <!-- Software cards will be dynamically inserted here -->
+        </section>
+
+        <div class="loading" id="loading">
+            <i class="fas fa-spinner fa-spin fa-2x"></i>
+            <p>Завантаження...</p>
+        </div>
+    </main>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="toast" id="toast"></div>
+
+    <template id="software-card-template">
+        <div class="software-card">
+            <div class="software-header">
+                <img class="software-icon" src="" alt="logo" onerror="this.src='images/placeholder.svg'">
+                <h3></h3>
+            </div>
+            <p class="description"></p>
+            <div class="downloads-count">
+                <i class="fas fa-download"></i>
+                <span></span>
+            </div>
+            <a href="#" class="download-btn" target="_blank">Завантажити</a>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>
